@@ -1,0 +1,51 @@
+doctype html 
+hmtl 
+    head
+        meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title JS día 1 Drum
+        link(rel="stylesheet", href="style.css")
+    body 
+    .container 
+        .title 
+                h1 Reto #1 - Bateria Javascript 
+                p Carlos Villatoro
+        .keys 
+            div(data-key="65" class="key")
+                kbd A
+                span.sound aplauso 
+            div(data-key="83" class="key")
+                kbd S
+                span.sound platillos dbls
+            div(data-key="68" class="key")
+                kbd D
+                span.sound tambor de pie
+            div(data-key="70" class="key")
+                kbd F
+                span.sound Platillos 1
+            div(data-key="71" class="key")
+                kbd G
+                span.sound bombo
+            div(data-key="72" class="key")
+                kbd H
+                span.sound platillos 2
+            div(data-key="74" class="key")
+                kbd J
+                span.sound tambor central
+            div(data-key="75" class="key")
+                kbd K
+                span.sound Timbal
+            div(data-key="76" class="key")
+                kbd L
+                span.sound claves
+        audio(src="./assets/sounds/clap.wav" data-key="65")
+        audio(src="./assets/sounds/hihat.wav" data-key="83") 
+        audio(src="./assets/sounds/kick.wav" data-key="68") 
+        audio(src="./assets/sounds/openhat.wav" data-key="70") 
+        audio(src="./assets/sounds/boom.wav" data-key="71") 
+        audio(src="./assets/sounds/ride.wav" data-key="72") 
+        audio(src="./assets/sounds/snare.wav" data-key="74") 
+        audio(src="./assets/sounds/tom.wav" data-key="75") 
+        audio(src="./assets/sounds/tink.wav" data-key="76") 
+        
+        script(src="./assets/app.js") 

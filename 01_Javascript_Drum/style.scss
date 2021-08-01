@@ -1,0 +1,77 @@
+$color_primary: #F7EA00;
+$color_claro: #fff;
+$color_oscuro: #000;
+$font_primary: sans-serif;
+
+html{
+    font-size: 8px;
+    background: url('./assets/img/concert-drum.jpg') bottom center;
+    background-size: cover;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: $font_primary;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    .title{
+        margin-top: 12rem;
+        margin-bottom: -35rem;
+        font-size: 2rem;
+        color: $color_claro;
+        font-weight: 800;
+        text-shadow: 0 0 .5rem $font_primary;
+        p{
+            text-align: center;
+            color: $color_primary;
+        }
+    }
+}
+
+.keys{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    .key{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: .4rem solid $color_oscuro;
+        border-radius: .5rem;
+        margin: 1rem;
+        font-size: .2rem;
+        padding: 1rem .5rem;
+        width: 15rem;   
+        color: $color_claro;
+        background: rgba(0,0,0,.4);
+        text-shadow: 0 0 .5rem $color_oscuro;
+        transition: all .07s ease;
+    }
+}
+
+.playing{
+    transform: scale(1.1);
+    border-color: $color_primary;
+    box-shadow: 0 0 1rem $color_primary;
+}
+
+kbd{
+    display: block;
+    font-size: 4rem;
+}
+
+.sound{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: $color_primary;
+}
+
