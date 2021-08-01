@@ -1,1 +1,0 @@
-Soy el reto de Javascript de 30 días
