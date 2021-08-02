@@ -1,0 +1,71 @@
+$font_primary: 'helvetica neue';
+$color_claro: #fff;
+$color_oscuro: #000;
+$color_logo: #F7EA00;
+$color_primary: #293B5F;
+$second_hand: #CF0000;
+
+html{
+    background: url(https://cdn.pixabay.com/photo/2017/06/23/15/49/boot-2435056_960_720.jpg);
+    background-size: cover;
+    font-family: $font_primary;
+    text-align: center;
+    font-size: 10px;
+}
+
+body{
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    color: $color_claro;
+}
+
+span{
+    font-size: 3rem;
+    font-weight: 700;
+    color: $color_logo;
+}
+
+.clock{
+    width: 30rem;
+    height: 30rem;
+    border: 20px solid $color_primary;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow: 
+    0 0 0 4px rgba(0,0,0,0.1)
+    inset 0 0 00 3px $color_claro
+    inset 0 0 10px $color_oscuro
+    0 0 10px rgba(0,0,0,0.2);
+    &__face{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-3px);
+        .hand{
+            width: 50%;
+            height: 6px;
+            background: $color_claro;
+            position: absolute;
+            top: 50%;
+            transform-origin: 100%;
+            transform: rotate(90deg);
+            transition: all 0.05s;
+            transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+        }
+        .second-hand{
+            background: $second_hand;
+            }
+
+    }
+}
