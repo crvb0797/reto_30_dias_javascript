@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="style.css")
+        title Variables de CSS
+    body 
+        h2 Reto #3 actualizar variables de CSS 
+            br
+            span.hl Carlos Villatoro
+        div.controls 
+            label(for="spacing") Espacio: 
+            input#spacing(type="range", name="spacing" min="10" max="200" value="10" data-sizing="px")
+
+            label(for="blur") Difuminado: 
+            input#blur(type="range", name="blur" min="0" max="25" value="5" data-sizing="px")
+
+            label(for="base") Color base:
+            input#base(type="color", name="base" value="#ffc600")
+        img(src="https://cdn.pixabay.com/photo/2018/03/04/09/41/shark-3197585_960_720.jpg", alt="Tiburon" loading="lazy")
+        script(src="app.js") 
+
+
+        
