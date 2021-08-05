@@ -1,0 +1,90 @@
+$color_primary: #ffc600;
+$color_secondary: #6b0f9c;
+$color_claro:#fff;
+$color_oscuro:#000;
+$font_primry: 'helvetica neue';
+$font_secondary: 'Amatic SC', cursive;
+
+html{
+    box-sizing: border-box;
+    background: $color_primary;
+    font-family: $font_primry;
+    font-size: 20px;
+    font-weight: 200;
+    body{
+        margin: 0;
+    }
+    *, *::before, *::after{
+        box-sizing: inherit;
+    }
+}
+
+.panels{
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    .panel {
+        /* background: $color_secondary; */
+        background: $color_secondary; 
+        box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+        color: $color_claro;
+        text-align: center;
+        align-items: center;
+        transition: 
+            font-size 0.7s cubic-bezier(0.61,-0.19,0.7,-0.11),
+            flex 0.7s cubic-bezier(0.61,-0.19,0.7,-0.11),
+            background 0.2s;
+        font-size: 20px;
+        background-size: cover;
+        background-position: center;
+        flex: 1;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.panels > .panel1 { background-image:url(https://cdn.pixabay.com/photo/2015/11/22/19/04/crowd-1056764_960_720.jpg); }
+.panels > .panel2{ background-image:url(https://cdn.pixabay.com/photo/2017/02/27/23/35/lighthouse-2104591_960_720.jpg); }
+.panels > .panel3{ background-image:url(https://cdn.pixabay.com/photo/2016/03/09/09/43/person-1245959_960_720.jpg); }
+.panels > .panel4{ background-image:url(https://cdn.pixabay.com/photo/2018/08/04/16/23/lion-3583963_960_720.jpg); }
+.panels > .panel5{ background-image:url(https://cdn.pixabay.com/photo/2015/03/26/09/47/sky-690293_960_720.jpg); }
+
+.panel > * {
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel > *:first-child { transform: translateY(-100%); }
+.panel.open-active > *:first-child { transform: translateY(0); }
+.panel > *:last-child { transform: translateY(100%); }
+.panel.open-active > *:last-child { transform: translateY(0); }
+
+.panel p {
+    text-transform: uppercase; 
+    font-family: $font_secondary;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 2em;
+}
+
+.panel p:nth-child(2){
+    font-size: 4em;
+}
+
+.panel.open{
+    flex: 5;
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 600px){
+    .panel p {
+        font-size: 1em;
+    }
+}
+
+
