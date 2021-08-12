@@ -1,0 +1,51 @@
+/* Variables */
+$font_primary: sans-serif;
+$font_secondary: 'helvetica neue';
+$bg_color: #ffc600;
+$bg_color_2: #f9f9f9;
+$color_claro: #fff;
+$border_color: #f1f1f1;
+$border_color_2: #d1e2ff;
+
+html{
+    font-family: $font_primary;
+    background: $bg_color;
+}
+
+.inbox{
+    max-width: 400px;
+    margin: 50px auto;
+    background: $color_claro;
+    border-radius: 5px;
+    box-shadow: 10px 10px 0 rgba(0,0,0,.1);
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $border_color;
+}
+
+.item:last-child{
+    border-bottom: 0;
+}
+
+input:checked + p {
+    background: $bg_color_2;
+    text-decoration: line-through;
+}
+
+input[type="checkbox"]{
+    margin: 20px;
+}
+
+p{
+    margin: 0;
+    padding: 20px;
+    transition: background 0.2s;
+    flex: 1;
+    font-family: $font_secondary;
+    font-size: 20px;
+    font-weight: 200;
+    border-left: 1px solid $border_color_2;
+}
